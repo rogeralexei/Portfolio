@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #0b090a;
+    color: white;
+    font-family: "Oswald";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar .logo-section .logo{
+    height: 60px;
+    width: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .link-section .links{
+    display: flex;
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar .link-section .links .nav-link{
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0 0 0 20px;
+    cursor: pointer;
 }
+
+.navbar .link-section .links .nav-link:hover{
+    border-bottom: 1px solid white;
+}
+
+.hero-wrapper{
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content{
+    text-align: center;
+}
+
+.hero-content h1{
+    font-size: 12em;
+}
+
+.hero-content p{
+    font-family: "Poppins";
+    font-size: 3.5em;
+}
+
+.down-arrow{
+    text-align: center;
+}
+
+.down-arrow p{
+    opacity: 1;
+    display: block;
+    font-size: 2em;
+    animation: appear 2s;
+}
+
+.abilities{
+    height: 100vh;
+    display: flex;
+    padding: 50px 50px 0 50px;
+    justify-content: space-between;
+    font-family: "Poppins";
+}
+
+.abilities h2{
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+.abilities .general-info{
+    text-align: center;
+    padding: 0 5%;
+}
+
+.abilities .general-info .content{
+    margin-bottom: 40px;
+}
+
+.abilities .general-info p,.abilities .general-info li{
+    text-align: justify;
+    font-size: 1.6em;
+}
+
+.abilities .general-info ul{
+    list-style: none;
+}
+
+.abilities .technologies{
+    text-align: center;
+    background: rgb( 255, 255, 255);
+    color: black;
+    border-radius: 10px;
+    padding: 0 100px;
+}
+
+.abilities .technologies .technology-bars{
+    text-align: left;
+    margin-top: 40px;
+}
+
+.abilities .technologies .technology-bars p{
+    font-size: 1.6em;
+    margin-top: 20px;
+}
+
+.abilities .technologies .technology-bars progress{
+    width: 100%;
+}
+
+.education-item{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.education-item h3{
+    font-size: 1.7em;
+}
+
+.education-item p{
+    color: orange;
+}
+
+.education-item h4{
+    font-size: 1.5em;
+}
+
+.country{
+    background-color: white;
+    color: black !important;
+    display: inline-block;
+    padding: 2px !important;
+    font-size: 1.2em !important;
+    border-radius: 20px;
+}
+
+.contact{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2{
+    font-size: 9em;
+}
+
+.contact-logos{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.net-logo{
+    height: 10px;
+    width: 10px;
+
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+}
+
+footer p{
+    font-size: 1.5em;
+    color: black;
+}
+
+.projects{
+    height: 100vh;
+    padding: 50px 50px 0 50px;
+}
+
+.project-grid{
+    display: grid;
+    grid-gap: 50px;
+    row-gap: 150px;
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+}
+
+.projects h2{
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 60px;
+}
+
+.project{
+    display: inline-flex;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+}
+
+.project h3{
+    font-size: 3em;
+}
+
+
+
+@keyframes appear {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
